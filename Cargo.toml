@@ -1,0 +1,8 @@
+[package]
+name = "spintrace"
+version = "0.1.0"
+edition = "2021"
+description = "Vulkan Bloch spin and pulse sequence simulator"
+publish = false
+
+[dependencies]
