@@ -92,10 +92,7 @@ $$
 The implemented Bloch equation is
 
 $$
-\frac{d\mathbf{M}_j}{dt}
-=
-\mathbf{M}_j \times \boldsymbol{\Omega}_j
-+
+\frac{d\mathbf{M}_j}{dt} = \mathbf{M}_j \times \boldsymbol{\Omega}_j +
 \begin{pmatrix}
 -M_{x,j}/T_{2,j} \\
 -M_{y,j}/T_{2,j} \\
@@ -148,18 +145,11 @@ The full Vulkan model supports up to 1,048,576 spins. The CPU preview uses a bou
 Intervals without transverse RF use an analytic free-precession update:
 
 $$
-M_{xy}(t+\Delta t)
-=
-M_{xy}(t)
-e^{-\Delta t/T_2}
-e^{-i\Omega_z\Delta t},
+M_{xy}(t+\Delta t) = M_{xy}(t) e^{-\Delta t/T_2} e^{-i\Omega_z\Delta t},
 $$
 
 $$
-M_z(t+\Delta t)
-=
-M_0+
-\left(M_z(t)-M_0\right)e^{-\Delta t/T_1}.
+M_z(t+\Delta t) = M_0 + \left(M_z(t)-M_0\right)e^{-\Delta t/T_1}.
 $$
 
 Intervals containing RF use symmetric operator splitting:
@@ -176,7 +166,7 @@ The spin echo preset contains an excitation pulse, a refocusing pulse, gradient 
 
 For static off-resonance and an ideal refocusing pulse, phase dispersion reverses after the refocusing pulse. The transverse signal reaches a local maximum near TE while its envelope remains limited by T2 decay.
 
-![Spin echo refocusing](assets/spin-echo-refocusing.png)
+![Spin echo refocusing](assets/spin-echo-refocusin.png)
 
 The gradient echo preset contains an excitation pulse, a prephasing gradient and a readout gradient. The readout amplitude is selected so the longitudinal gradient moment returns to zero at the echo marker.
 
